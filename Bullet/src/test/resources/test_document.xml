@@ -1,0 +1,52 @@
+<bullet>
+    <document name="Cool Document">
+        <children>
+            <bullet_point>
+                <bookmarked>true</bookmarked>
+                <contents>
+                    <content>
+                        <type>TEXT</type>
+                        <data>Hello, World!</data>
+                    </content>
+                </contents>
+                <children>
+                    <bullet_point>
+                        <bookmarked>false</bookmarked>
+                        <contents>
+                            <content>
+                                <type>TEXT</type>
+                                <data>THIS. IS. SPARTA!</data>
+                            </content>
+                            <content>
+                                <type>IMAGE</type>
+                                <data>Totally a real image url</data>
+                            </content>
+                        </contents>
+                        <children>
+                            <bullet_point>
+                                <bookmarked>false</bookmarked>
+                                <contents>
+                                    <content>
+                                        <type>PDF</type>
+                                        <data>Totally a real PDF file path</data>
+                                    </content>
+                                </contents>
+                                <children/>
+                            </bullet_point>
+                            <bullet_point>
+                                <bookmarked>true</bookmarked>
+                                <contents>
+                                    <content>
+                                        <type>LATEX</type>
+                                        <data>LaTeX code...</data>
+                                    </content>
+                                </contents>
+                                <children/>
+                            </bullet_point>
+                        </children>
+                    </bullet_point>
+                </children>
+            </bullet_point>
+        </children>
+    </document>
+</bullet>

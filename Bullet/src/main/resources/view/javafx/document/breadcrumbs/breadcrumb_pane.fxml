@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.HBox?>
+<HBox fx:id="container" fx:controller="bulletapp.view.javafx.nodes.document.breadcrumbs.BreadcrumbPane" maxHeight="-Infinity"
+      maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="40.0" prefWidth="400.0"
+      xmlns:fx="http://javafx.com/fxml/1"/>

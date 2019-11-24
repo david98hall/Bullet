@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="rootPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" stylesheets="@../../css/theme_light.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulletapp.view.javafx.nodes.choosers.bookmark.BookmarkChooser">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="40.0" />
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="40.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Pane fx:id="headerBgPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+        <ImageView fx:id="bookmarkIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../icons/bookmark/bookmark_white_icon.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="titleLabel" text="Bookmarks" textFill="WHITE" GridPane.columnIndex="1">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="listScrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+            <content>
+                <VBox fx:id="listVBox" prefHeight="200.0" prefWidth="100.0" />
+            </content>
+        </ScrollPane>
+    </children>
+</GridPane>

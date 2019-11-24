@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="100.0" prefWidth="300.0" stylesheets="@../../css/theme_light.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" layoutX="75.0" layoutY="69.0" spacing="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="nameTextField" prefWidth="100.0" promptText="Enter document name" />
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#onCreateAction" styleClass="buttonGreen" text="Create document" textFill="WHITE" />
+            <Text fx:id="warningText" fill="#d31616" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

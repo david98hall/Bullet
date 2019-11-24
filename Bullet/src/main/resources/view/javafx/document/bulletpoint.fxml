@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="rootPane" minHeight="-Infinity" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" type="GridPane" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+        <ColumnConstraints halignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+        <ColumnConstraints />
+        <ColumnConstraints halignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+        <ColumnConstraints halignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" />
+      <ColumnConstraints halignment="CENTER" maxWidth="49.0" minWidth="-Infinity" prefWidth="48.0" />
+      <ColumnConstraints halignment="CENTER" />
+      <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="30.0" valignment="TOP" />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Button fx:id="foldingButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#foldingButtonOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <tooltip>
+            <Tooltip fx:id="foldingToolTip" text="Expand" />
+         </tooltip>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="foldingIcon" fitHeight="25.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/icon_expand.png" />
+               </image>
+            </ImageView>
+         </graphic>
+        </Button>
+        <Button fx:id="zoomButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#zoomButtonOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" GridPane.columnIndex="1">
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+            <graphic>
+                <ImageView fx:id="zoomImageView" fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../icons/bulletpoint/icon_bullet_point_empty.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <tooltip>
+            <Tooltip text="Zoom into" />
+         </tooltip>
+        </Button>
+        <HBox fx:id="contentsHBox" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="TOP" />
+        <VBox fx:id="childrenVBox" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+        <Button fx:id="bookmarkButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#bookmarkButtonOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;" GridPane.columnIndex="3">
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <graphic>
+            <ImageView fx:id="bookmarkImageView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/bookmark/bookmark_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+        </Button>
+        <Button fx:id="commentButton" mnemonicParsing="false" onAction="#commentButtonOnAction" GridPane.columnIndex="4">
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+         <tooltip>
+            <Tooltip fx:id="commentToolTip" styleClass="text-normal-white-bold" text="Add comment" wrapText="true" />
+         </tooltip>
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/comment/icons8-topic-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+        </Button>
+      <MenuButton fx:id="addContentsButton" onMouseEntered="#addContentOnMouseEntered" onMouseExited="#addContentOnMouseExited" mnemonicParsing="false" text="A" GridPane.columnIndex="5">
+          <GridPane.margin>
+              <Insets top="5.0" />
+          </GridPane.margin>
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </MenuButton>
+    </children>
+    <padding>
+        <Insets left="2.0" right="2.0" />
+    </padding>
+</fx:root>

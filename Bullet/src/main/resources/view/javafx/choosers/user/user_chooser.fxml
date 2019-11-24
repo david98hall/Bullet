@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane fx:id="rootPane" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: white;"
+          stylesheets="@../../css/theme_light.css" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="bulletapp.view.javafx.nodes.choosers.user.UserChooser">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity"
+                           prefWidth="40.0"/>
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity"
+                           prefWidth="40.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" valignment="CENTER"
+                        vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Pane fx:id="headerBgPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;"
+              GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
+        <ImageView fx:id="userIcon" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../icons/user/user_icon.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="titleLabel" text="Users" textFill="WHITE" GridPane.columnIndex="1">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Button fx:id="addUserButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                minWidth="-Infinity" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="30.0"
+                prefWidth="30.0" style="-fx-background-color: transparent;" GridPane.columnIndex="2">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../icons/add_icon.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <ScrollPane fx:id="listScrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0"
+                    GridPane.columnSpan="3" GridPane.rowIndex="1">
+            <content>
+                <VBox fx:id="listVBox" prefHeight="200.0" prefWidth="100.0"/>
+            </content>
+        </ScrollPane>
+    </children>
+</GridPane>

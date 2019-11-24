@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<fx:root fx:id="rootNode" mnemonicParsing="false" onAction="#onAction" style="-fx-background-color: white;" type="Button" xmlns:fx="http://javafx.com/fxml/1">
+   <graphic>
+      <GridPane hgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="20.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="label" maxWidth="80.0" prefWidth="70.0" text="Breadcrumb">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../../../../icons/icon_expand.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </graphic>
+   <padding>
+      <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0" />
+   </padding>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</fx:root>

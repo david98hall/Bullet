@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.StackPane?>
+<StackPane fx:id="stackPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulletapp.view.javafx.MainController">
+    <children>
+        <fx:include fx:id="modalPanel" source="modal/modal.fxml"/>
+        <fx:include fx:id="workspace" source="scenes/workspace.fxml"/>
+        <fx:include fx:id="startScreen" source="scenes/start_screen.fxml"/>
+    </children>
+</StackPane>

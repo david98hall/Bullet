@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#EditDiagramTypeMenueItemOnAction" text="diagramType" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#EditDataMenueItemOnAction" text="data" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#viewDiagramMenueItemOnAction" text="View Diagram" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <StackPane fx:id="stackPane" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                <AnchorPane fx:id="editPane" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <TabPane fx:id="tabPane" layoutX="-25.0" layoutY="37.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="diagramPane" minHeight="0.0" minWidth="0.0" style="-fx-background-color: white;" />
+                  <AnchorPane fx:id="diagramChoicePane" style="-fx-background-color: white;">
+                     <children>
+                        <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#areaChartButtonOnAction" text="AreaChart" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" GridPane.columnIndex="1">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#barChartButtonOnAction" text="BarChart" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" GridPane.columnIndex="2">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#bubbleChartButtonOnAction" text="BubbleChart" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" GridPane.columnIndex="3">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#lineChartButtonOnAction" text="LineChart" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button disable="true" mnemonicParsing="false" text="PieChart" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#scatterChartButtonOnAction" text="ScatterChart" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#stackedAreaChartButtonOnAction" text="StackedAreaChart" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#stackedBarChartButtonOnAction" text="StackedBarChart" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</fx:root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" onMousePressed="#closeButtonOnAction" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(0,0,0,0.85);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulletapp.view.javafx.scenes.modalpanel.ModalPanel">
+    <children>
+        <VBox alignment="CENTER" fillWidth="false" layoutX="25.0" layoutY="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="modalPane" onMouseClicked="#consumeEvent" onMousePressed="#consumeEvent" style="-fx-background-color: -fx-background;">
+                    <children>
+                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                        <AnchorPane>
+                           <children>
+                              <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                              <Label fx:id="modalTitleLabel" focusTraversable="false" styleClass="title-xlarge-dark-gray" text="Title" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                                <Button fx:id="closeButton" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#closeButtonOnAction" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" prefHeight="30.0" prefWidth="30.0" styleClass="transparent-button">
+                                                    <graphic>
+                                                        <ImageView fx:id="closeButtonImageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                    <tooltip>
+                                                        <Tooltip styleClass="text-normal-white-bold" text="Close this window" wrapText="true" />
+                                                    </tooltip>
+                                                </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </AnchorPane>
+                                <Separator focusTraversable="false" prefWidth="200.0" />
+                                <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                    <fx:include fx:id="bookmarkChooser" source="../choosers/bookmark/bookmark_chooser.fxml" />
+                                 </StackPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

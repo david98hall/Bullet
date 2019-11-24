@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<fx:root fx:id="rootPane" prefHeight="250.0" prefWidth="400.0" stylesheets="@../css/theme_light.css" type="AnchorPane" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="childPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="outlinePane" disable="true" layoutX="10.0" layoutY="10.0" styleClass="outline-1px-rounded-5px" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</fx:root>

@@ -1,0 +1,130 @@
+.outline-1px {
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+}
+
+.outline-1px-rounded-5px {
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.bg-rounded-5px {
+    -fx-background-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.bg-transparent-rounded-5px {
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused {
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-area .content {
+    -fx-padding: 10px;
+    -fx-text-fill: gray;
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-areaComment {
+    height:auto;
+    -fx-background-color: lightblue;
+    -fx-prompt-text-fill: #505050;
+}
+
+.text-areaComment .content {
+    height:auto;
+    -fx-background-color: lightblue;
+    -fx-text-fill: gray;
+    -fx-highlight-fill: #7ecfff;
+}
+
+.text-areaComment:focused .content {
+    height:auto;
+    -fx-background-color: lightblue;
+}
+
+.text-areaComment .scroll.pane {
+    -fx-hbar-policy: never;
+       -fx-vbar-policy: never;
+}
+
+
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: black;
+    -fx-padding: 0 1 0 1;
+}
+
+.split-pane:vertical > .split-pane-divider {
+    -fx-background-color: black;
+    -fx-padding: 1 0 1 0;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar > .thumb {
+    -fx-background-color: black;
+    -fx-background-radius: 5 5 5 5;
+}
+
+.scroll-bar > .track {
+    -fx-background-color: white;
+}
+
+.scroll-bar > .corner {
+    -fx-background-color: white;
+}
+
+.scroll-bar > .increment-button {
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.scroll-bar > .decrement-button {
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.scroll-paneComment {
+    -fx-background-color: transparent,transparent;
+    -fx-background-insets: 0, 0;
+    -fx-padding: 0;
+}
+
+.buttonBlue {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, #33ccff, #33ccff;
+}
+
+.buttonGreen {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, #009900, #009900;
+}
+.buttonRed {
+    -fx-background-color: -fx-shadow-highlight-color, #e53f2e, #e53f2e, #e53f2e;
+    -fx-background-radius: 0,0,0,0;
+}
+
